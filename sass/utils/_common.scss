@@ -1,3 +1,7 @@
+.container {
+  outline: 1px solid red;
+}
+
 h1,
 h2,
 h3,
@@ -62,7 +66,6 @@ img {
 
   @media screen and (min-width: 1200px) {
     min-width: 1200px;
-    padding: 0;
   }
 }
 

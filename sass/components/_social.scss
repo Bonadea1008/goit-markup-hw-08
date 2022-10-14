@@ -1,5 +1,27 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.social__icon {
+  fill: #afb1b8;
+}
+
+.social__link {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
 // .social {
-//   display: flex;
 //   padding-left: 32px;
 //   padding-right: 32px;
 //   justify-content: space-between;

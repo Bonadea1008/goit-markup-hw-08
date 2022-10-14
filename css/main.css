@@ -1,5 +1,5 @@
 :root {
-  --primary-text-color: #000000;
+  --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --menu-text-color: #212121;
   --hero-text-color: #ffffff;
@@ -7,6 +7,10 @@
   --icon-color: #afb1b8;
   --background-primary: #ffffff;
   --background-secondary: #2f303a;
+}
+
+.container {
+  outline: 1px solid red;
 }
 
 h1,
@@ -78,7 +82,6 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     min-width: 1200px;
-    padding: 0;
   }
 }
 
@@ -88,10 +91,6 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.container {
-  outline: 1px solid red;
 }
 
 .container-icon {
@@ -215,4 +214,88 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: var(--hero-text-color);
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+.team__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.team__name {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.team__container {
+  padding-top: 30px;
+  background-color: var(--background-primary);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__profession {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.team__image {
+  width: auto;
+}
+
+.team__link {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__link:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .team__list .team__link {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.social__icon {
+  fill: #afb1b8;
+}
+
+.social__link {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */
