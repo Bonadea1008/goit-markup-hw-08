@@ -43,6 +43,12 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .list {
   padding: 0;
@@ -157,8 +163,56 @@ img {
 .about-section {
   display: none;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .about-section {
     display: contents;
   }
+}
+
+.about-section {
+  padding-top: 0;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-title {
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  min-width: 366px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.about-item {
+  position: relative;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-thumb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  font-style: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--hero-text-color);
 }/*# sourceMappingURL=main.css.map */
