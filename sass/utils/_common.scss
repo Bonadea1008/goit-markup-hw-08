@@ -27,8 +27,11 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  //   // padding-top: 94px;
+  //   // padding-bottom: 94px;
 }
 
 .list {
@@ -44,12 +47,21 @@ img {
 }
 
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 290px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+    padding: 0;
+  }
 }
 
 .visually-hidden {
