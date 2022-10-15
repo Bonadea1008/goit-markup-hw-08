@@ -9,17 +9,17 @@
 //   justify-content: space-between;
 // }
 
-// .logo {
-//   @include font(24px, 1.17, 0.03em);
-//   font-family: $secondaryFont;
-//   font-weight: 700;
-//   color: var(--primary-text-color);
-//   text-decoration: none;
+.logo {
+  @include font(24px, 1.17, 0.03em);
+  font-family: $secondaryFont;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  text-decoration: none;
 
-//   &-web {
-//     color: var(--accent-color);
-//   }
-// }
+  &-web {
+    color: var(--accent-color);
+  }
+}
 
 // .menu-toggle {
 //   min-height: 40px;
