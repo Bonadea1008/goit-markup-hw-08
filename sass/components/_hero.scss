@@ -1,28 +1,65 @@
-// .hero {
-//   max-width: 1600px;
-//   min-height: 600px;
-//   padding-top: 200px;
-//   padding-bottom: 200px;
+.hero {
+  max-width: 480px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../../images/header-mob-1x.jpg');
 
-//   text-align: center;
-//   background: #c4c4c4;
-//   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-//     url('../images/bcground.jpg');
-//   background-repeat: no-repeat;
-//   margin-left: auto;
-//   margin-right: auto;
-//   background-position: center;
-//   border: 1px solid #000000;
-// }
+  @include retina {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../../images/header-mob-2x.jpg');
+  }
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: 480px 400px;
+  border: 1px solid #000000;
 
-// .hero-title {
-//   margin-bottom: 30px;
-//   width: 696px;
-//   margin-left: auto;
-//   margin-right: auto;
+  @include tablet {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../../images/header-tab-1x.jpg');
+    @include retina {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../../images/header-tab-2x.jpg');
+    }
+    background-size: 768px 400px;
+  }
 
-//   @include font(44px, 1.36, 0.06em);
-//   font-weight: 900;
-//   text-transform: uppercase;
-//   color: var(--hero-text-color);
-// }
+  @include desktop {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../images/header-desk-1x.jpg');
+    @include retina {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../../images/header-desk-2x.jpg');
+    }
+    background-size: 1600px 600px;
+  }
+}
+
+.hero-title {
+  margin-bottom: 30px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include font(26px, 1.62, 0.06em);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--hero-text-color);
+
+  @include desktop {
+    width: 696px;
+    @include font(44px, 1.36, 0.06em);
+  }
+}
+
+//

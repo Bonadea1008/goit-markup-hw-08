@@ -34,7 +34,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -53,19 +53,18 @@ img {
 }
 
 .container {
-  min-width: 290px;
   max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 768px) {
-    min-width: 768px;
+  @include tablet {
+    max-width: 768px;
   }
 
-  @media screen and (min-width: 1200px) {
-    min-width: 1200px;
+  @include desktop {
+    max-width: 1200px;
   }
 }
 

@@ -1,7 +1,7 @@
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
-  --menu-text-color: #212121;
+  // --menu-text-color: #212121;
   --hero-text-color: #ffffff;
   --accent-color: #2196f3;
   --icon-color: #afb1b8;
@@ -12,8 +12,3 @@
 $primaryFont: 'Roboto', sans-serif;
 $secondaryFont: 'Raleway', sans-serif;
 
-@mixin font($fs, $lh, $ls) {
-  font-size: $fs;
-  line-height: $lh;
-  letter-spacing: $ls;
-}

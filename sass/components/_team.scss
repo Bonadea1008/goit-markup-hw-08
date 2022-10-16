@@ -7,6 +7,11 @@
   @include font(28px, 1.18, 0.03em);
   text-align: center;
   color: var(--primary-text-color);
+
+  @include desktop {
+    margin-bottom: 50px;
+    @include font(36px, 1.16, 0.03em);
+  }
 }
 
 .team__name {
@@ -40,6 +45,20 @@
 
   &:not(:last-child) {
     margin-bottom: 30px;
+
+    @include desktop {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet {
+    width: calc((100% - 2 * 15px) / 2);
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: calc((100% - 3 * 30px) / 4);
   }
 }
 
@@ -49,10 +68,23 @@
   align-items: center;
   padding-top: 16px;
   padding-bottom: 24px;
+
+  @include desktop {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .social__icon {
   fill: #afb1b8;
+
+  @include desktop {
+    display: block;
+    fill: currentColor;
+  }
 }
 
 .social__link {
@@ -61,58 +93,8 @@
   min-height: 44px;
   justify-content: center;
   align-items: center;
-}
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  .team__list .team__link {
-    width: calc((100% - 2 * 15px) / 2);
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__list {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0;
-  }
-
-  .team__title {
-    margin-bottom: 50px;
-    @include font(36px, 1.16, 0.03em);
-  }
-
-  .team__list .team__link {
-    width: calc((100% - 3 * 30px) / 4);
-  }
-
-  .team__link:not(:last-child) {
-    margin-right: 30px;
-  }
-
-    .social {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 30px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .social .social__item {
-    margin-right: 0;
-  }
-
-  .social__link {
+  @include desktop {
     border-radius: 50%;
 
     background-color: var(--background-primary);
@@ -127,9 +109,28 @@
       background-color: var(--accent-color);
     }
   }
+}
 
-  .social__icon {
-    display: block;
-    fill: currentColor;
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team__list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+.social .social__item {
+  @include desktop {
+    margin-right: 0;
   }
 }

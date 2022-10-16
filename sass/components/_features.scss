@@ -15,6 +15,10 @@
   color: var(--primary-text-color);
   text-align: center;
   margin-bottom: 10px;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .icon {
@@ -34,34 +38,36 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .features-list {
+.features-list {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
+}
 
-  .features-list .features-item {
+.features-list .features-item {
+  @include tablet {
     width: calc((100% - 2 * 15px) / 2);
     margin-bottom: 0;
   }
-
-  .features-title {
-    text-align: left;
-  }
 }
 
-@media screen and (min-width: 1200px) {
-  .features-list {
+.features-list {
+  @include desktop {
     flex-wrap: nowrap;
     gap: 0;
   }
+}
 
-  .features-list .features-item {
-    max-width: calc((100% - 3 * 30px) / 4);
+.features-list .features-item {
+  @include desktop {
+    width: calc((100% - 3 * 30px) / 4);
   }
+}
 
-  .features-item:not(:last-child) {
+.features-item:not(:last-child) {
+  @include desktop {
     margin-right: 30px;
   }
 }
