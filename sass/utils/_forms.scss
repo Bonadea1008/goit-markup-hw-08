@@ -19,7 +19,7 @@
   transform: translate(-50%, -50%) scale(1);
 
   min-width: 450px;
-  height: 609px;
+  max-height: 609px;
   padding: 40px;
 
   background: #ffffff;
@@ -101,7 +101,7 @@
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-// .user-comments height
+
 .user-comments {
   @include font(12px, 1.17, 0.01em);
   resize: none;

@@ -4,12 +4,24 @@
   @include font(28px, 1.18, 0.03em);
   text-align: center;
   color: var(--primary-text-color);
+
+  @include desktop {
+    margin-bottom: 50px;
+    @include font(36px, 1.17, 0.03em);
+  }
 }
 
 .clients__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .clients__link {
@@ -30,6 +42,14 @@
     color: var(--accent-color);
     border-color: var(--accent-color);
   }
+
+  @include tablet {
+    width: calc((100% - 4 * 15px) / 3);
+  }
+
+  @include desktop {
+    width: calc((100% - 5 * 30px) / 6);
+  }
 }
 
 .clients__item {
@@ -43,28 +63,4 @@
 .clients__icon {
   display: block;
   fill: currentColor;
-}
-
-@media screen and (min-width: 768px) {
-  .clients__link {
-    width: calc((100% - 4 * 15px) / 3);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .clients__title {
-    margin-bottom: 50px;
-    @include font(36px, 1.17, 0.03em);
-  }
-
-  .clients__link {
-    width: calc((100% - 5 * 30px) / 6);
-  }
-
-  .clients__list {
-    flex-wrap: nowrap;
-    gap: 0;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
