@@ -1,25 +1,71 @@
 .list-filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 44px;
-  min-width: 575px;
+  margin-bottom: 40px;
+  max-width: 330px;
+
+  @media screen and (min-width: 360px) {
+    width: 330px;
+  }
+
+  @include tablet {
+    min-width: 575px;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
 }
 
 .link-filter:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 360px) {
+    margin-bottom: 0;
+  }
+}
+
+.link-filter:nth-child(-n + 3) {
+  @media screen and (min-width: 360px) {
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.flex-item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .flex-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: auto;
+  }
 }
 
 .portfolio-title {
   @include font(18px, 2, 0.06em);
   margin-bottom: 4px;
   color: var(--primary-text-color);
+
+  @include tablet {
+    min-width: 304px;
+  }
 }
 
 .portfolio-text {
@@ -32,10 +78,21 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
+
+.flex-element-first {
+  @include tablet {
+    height: 148px;
+  }
+
+  @include desktop {
+    height: auto;
+  }
+}
 .works-thumb {
   position: relative;
   overflow: hidden;
 }
+
 .overlay-description {
   position: absolute;
   top: 0;
